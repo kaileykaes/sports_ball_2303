@@ -47,4 +47,12 @@ class Team
   def average_cost_of_player
     "$#{total_value / player_count}".insert(-4, ',').insert(-8, ',')
   end
+
+  def players_by_last_name
+    player_last_names = ''
+    last_names = roster.map do |player|
+      player.last_name
+    end
+    last_names.sort!.join(', ')
+  end
 end
