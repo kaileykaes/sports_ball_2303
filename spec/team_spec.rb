@@ -106,4 +106,14 @@ RSpec.describe Team do
       expect(@team.players_by_last_name).to eq('DeNunez, McClennan, Palledorous, Porter')
     end
   end
+
+  describe '#descending_last_names' do 
+    it 'sorts players backwards' do 
+      @team.add_player(@player_1)
+      @team.add_player(@player_2)
+      @team.add_player(@player_3)
+      @team.add_player(@player_4)
+      expect(@team.descending_last_names).to eq('Porter, Palledorous, McClennan, DeNunez')
+    end
+  end
 end

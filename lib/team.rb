@@ -55,4 +55,12 @@ class Team
     end
     last_names.sort.join(', ')
   end
+
+  def descending_last_names
+    player_last_names = ''
+    last_names = roster.map do |player|
+      player.last_name
+    end
+    last_names.sort.reverse.join(', ')
+  end
 end
