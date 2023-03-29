@@ -65,7 +65,7 @@ RSpec.describe Team do
   end
 
   describe '#total_value' do 
-    it '#long_term_players' do 
+    it 'calculates total cost of players' do 
       @team.add_player(@player_1)
       @team.add_player(@player_2)
       @team.add_player(@player_3)
