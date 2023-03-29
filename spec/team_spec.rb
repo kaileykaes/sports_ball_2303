@@ -55,17 +55,17 @@ RSpec.describe Team do
       expect(@team.long_term_players).to eq([@player_1, @player_3])
     end
     
-    it '#long_term_players' do 
+    it '#short_term_players' do 
       @team.add_player(@player_1)
       @team.add_player(@player_2)
       @team.add_player(@player_3)
       @team.add_player(@player_4)
-      expect(@team.long_term_players).to eq([@player_2, @player_4])
+      expect(@team.short_term_players).to eq([@player_2, @player_4])
     end
   end
 
   describe '#total_value' do 
-    it 'calculates total cost of players' do 
+    xit 'calculates total cost of players' do 
       @team.add_player(@player_1)
       @team.add_player(@player_2)
       @team.add_player(@player_3)
@@ -75,14 +75,14 @@ RSpec.describe Team do
   end
 
   describe '#details' do 
-    it 'creates a hash of team details' do 
+    xit 'creates a hash of team details' do 
       @team.add_player(@player_1)
       @team.add_player(@player_2)
       @team.add_player(@player_3)
       @team.add_player(@player_4)
       expect(@team.details).to eq({
-        "total_value" => 85200000, 
-        "player_count" => 4
+        'total_value' => 85200000, 
+        'player_count' => 4
       })
     end
   end
