@@ -17,6 +17,8 @@ RSpec.describe Team do
     end
 
     it 'has attributes' do 
+      expect(@team.name).to eq('Dodgers')
+      expect(@team.city).to eq('Los Angeles')
     end
     
     it 'begins with an empty roster' do 
