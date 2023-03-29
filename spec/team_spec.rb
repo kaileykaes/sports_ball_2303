@@ -45,4 +45,22 @@ RSpec.describe Team do
       expect(@team.roster).to eq([@player_1, @player_2])
     end
   end
+
+  describe 'player terms' do 
+    it '#long_term_players' do 
+      @team.add_player(@player_1)
+      @team.add_player(@player_2)
+      @team.add_player(@player_3)
+      @team.add_player(@player_4)
+      expect(@team.long_term_players).to eq([@player_1, @player_3])
+    end
+    
+    it '#long_term_players' do 
+      @team.add_player(@player_1)
+      @team.add_player(@player_2)
+      @team.add_player(@player_3)
+      @team.add_player(@player_4)
+      expect(@team.long_term_players).to eq([@player_2, @player_4])
+    end
+  end
 end
