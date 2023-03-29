@@ -43,4 +43,8 @@ class Team
     team_details['player_count'] = player_count
     team_details
   end
+
+  def average_cost_of_player
+    "$#{total_value / player_count}".insert(-4, ',').insert(-8, ',')
+  end
 end
