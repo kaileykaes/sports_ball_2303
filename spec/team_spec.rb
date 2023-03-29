@@ -31,7 +31,7 @@ RSpec.describe Team do
       expect(@team.player_count).to eq(0)
     end
 
-    xit 'increases player count with added players' do 
+    it 'increases player count with added players' do 
       @team.add_player(@player_1)
       @team.add_player(@player_2)
       expect(@team.player_count).to eq(2)
@@ -39,7 +39,7 @@ RSpec.describe Team do
   end
 
   describe '#add_player' do 
-    xit 'adds players to roster' do 
+    it 'adds players to roster' do 
       @team.add_player(@player_1)
       @team.add_player(@player_2)
       expect(@team.roster).to eq([@player_1, @player_2])
