@@ -53,6 +53,6 @@ class Team
     last_names = roster.map do |player|
       player.last_name
     end
-    last_names.sort!.join(', ')
+    last_names.sort.join(', ')
   end
 end
