@@ -36,4 +36,11 @@ class Team
     end
     cost
   end
+
+  def details
+    team_details = Hash.new
+    team_details['total_value'] = total_value
+    team_details['player_count'] = player_count
+    team_details
+  end
 end
