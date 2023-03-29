@@ -8,4 +8,8 @@ class Player
     @monthly_cost
     @contract_length
   end
+
+  def first_name
+    name.split(' ').first
+  end
 end
