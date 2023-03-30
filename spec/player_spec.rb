@@ -40,7 +40,14 @@ RSpec.describe Player do
 
   it '#nickname' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
-    
+
     expect(player.nickname).to eq(nil)
+  end
+
+  it '#set_nickname' do 
+    player = Player.new("Michael Palledorous" , 1000000, 36)
+    player.set_nickname!('Squints')
+    
+    expect(player.nickname).to eq('Squints')
   end
 end
