@@ -30,9 +30,8 @@ class Team
   end
 
   def total_value
-    cost = 0
-    roster.map do |player|
-      cost += player.total_cost
+    cost = roster.sum do |player|
+      player.total_cost
     end
     cost
   end
@@ -49,18 +48,14 @@ class Team
   end
 
   def players_by_last_name
-    player_last_names = ''
     last_names = roster.map do |player|
       player.last_name
-    end
-    last_names.sort.join(', ')
+    end.sort.join(', ')
   end
 
   def descending_last_names
-    player_last_names = ''
     last_names = roster.map do |player|
       player.last_name
-    end
-    last_names.sort.reverse.join(', ')
+    end.sort.reverse.join(', ')
   end
 end
